@@ -2,3 +2,11 @@ specVersion: '2.6'
 metadata:
   name: fioricloud2
 type: application
+server:
+  customMiddleware:
+  - name: fiori-tools-appreload
+    afterMiddleware: compression
+    configuration:
+      port: 35729
+      path: webapp
+
